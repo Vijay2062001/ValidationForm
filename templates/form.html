@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+    <style>
+        body{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: white;
+            background: rgb(rgb(0, 0, 0), rgb(158rgb(71, 71, 209)4, 158), blue);
+            background: linear-gradient(90deg,rgb(214, 39, 39),rgb(197, 48, 125),rgb(24, 62, 228));
+        }
+        form{
+            color: black;
+            width: fit-content;
+            padding: 30px;
+            background-color: white;
+            box-shadow: -20px 20px 30px black;
+            border-radius: 20px;
+            transition: .6s;
+        }
+        input{
+            transition: .5s;
+        }
+        form:hover{
+            transform: translate(-20px,20px);
+            box-shadow: 40px 20px 30px black;
+        }
+        input:hover{
+            box-shadow: -5px 5px 20px black;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Validation</h1>
+            <form method="POST">
+                {% csrf_token %}
+                    {{SFO.as_p}}
+
+                    <input type="submit" value="Validation">
+            </form>
+
+    </center>
+</body>
+</html>
